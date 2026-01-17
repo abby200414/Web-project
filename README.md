@@ -1,6 +1,3 @@
-Here's your README in an attractive code format with proper Markdown styling:
-
-```markdown
 # 🌍 Wanderlust - Explore the World
 
 Wanderlust is a full-stack web application for exploring and sharing travel destinations. Built with Node.js, Express, MongoDB, and modern web technologies, this platform allows users to discover, create, and review beautiful places around the world.
@@ -46,54 +43,52 @@ Wanderlust is a full-stack web application for exploring and sharing travel dest
 - **Connect-flash** - Flash messages
 
 ## 📁 Project Structure
-
-```
 PROJECT/
-├── app.js                    # Main application entry point
-├── cloudConfig.js            # Cloudinary configuration
-├── middleWare.js             # Custom middleware
-├── schema.js                 # Joi validation schemas
+├── app.js # Main application entry point
+├── cloudConfig.js # Cloudinary configuration
+├── middleWare.js # Custom middleware
+├── schema.js # Joi validation schemas
 │
-├── controllers/              # Business logic
-│   ├── listings.js
-│   ├── reviews.js
-│   ├── users.js
+├── controllers/ # Business logic
+│ ├── listings.js
+│ ├── reviews.js
+│ ├── users.js
 │
-├── models/                   # MongoDB schemas
-│   ├── listings.js
-│   ├── reviews.js
-│   └── user.js
+├── models/ # MongoDB schemas
+│ ├── listings.js
+│ ├── reviews.js
+│ └── user.js
 │
-├── routes/                   # Route definitions
-│   ├── listings.js
-│   ├── review.js
-│   └── user.js
+├── routes/ # Route definitions
+│ ├── listings.js
+│ ├── review.js
+│ └── user.js
 │
-├── utils/                    # Utility functions
-│   ├── ExpressError.js
-│   └── wrapAsync.js
+├── utils/ # Utility functions
+│ ├── ExpressError.js
+│ └── wrapAsync.js
 │
-├── public/                   # Static assets
-│   ├── css/
-│   │   ├── rating.css
-│   │   └── style.css
-│   └── js/
+├── public/ # Static assets
+│ ├── css/
+│ │ ├── rating.css
+│ │ └── style.css
+│ └── js/
 │
-├── views/                    # EJS templates
-│   ├── layouts/
-│   ├── includes/
-│   ├── listings/
-│   └── users/
+├── views/ # EJS templates
+│ ├── layouts/
+│ ├── includes/
+│ ├── listings/
+│ └── users/
 │
-├── init/                     # Initialization scripts
-│   ├── data.js
-│   └── index.js
+├── init/ # Initialization scripts
+│ ├── data.js
+│ └── index.js
 │
-├── .env                      # Environment variables
+├── .env # Environment variables
 ├── .gitignore
 ├── package.json
 └── package-lock.json
-```
+
 
 ## 🚦 Getting Started
 
@@ -109,119 +104,116 @@ PROJECT/
    ```bash
    git clone <repository-url>
    cd PROJECT
-   ```
 
-2. **Install dependencies**
-   ```bash
+2. Install dependencies
    npm install
-   ```
 
-3. **Configure environment variables**
-   Create a `.env` file in the root directory:
-   ```env
-   CLOUDINARY_CLOUD_NAME=your_cloud_name
-   CLOUDINARY_KEY=your_api_key
-   CLOUDINARY_SECRET=your_api_secret
-   MAP_URL=your_maptiler_url
-   DB_URL=your_mongodb_atlas_url
-   SECRET=your_session_secret
-   ```
+3. Configure environment variables
+Create a .env file in the root directory:
 
-4. **Start the application**
-   ```bash
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_KEY=your_api_key
+CLOUDINARY_SECRET=your_api_secret
+MAP_URL=your_maptiler_url
+DB_URL=your_mongodb_atlas_url
+SECRET=your_session_secret
+
+4. Start the application
    node app.js
-   ```
+   
+5. Visit the application
+Open http://localhost:3000 in your browser
 
-5. **Visit the application**
-   Open `http://localhost:3000` in your browser
+🌐 Deployment
+Platform	Render.com
+Runtime	Node.js 22.17.0
+Build Command	npm install
+Start Command	node app.js
+Database	MongoDB Atlas
+Environment	Configured in Render dashboard
+📝 Key Functionalities
+👥 For All Users
+🌐 Browse all travel listings
 
-## 🌐 Deployment
+🔍 View detailed listing pages with reviews
 
-| **Platform** | **Render.com** |
-|--------------|----------------|
-| **Runtime** | Node.js 22.17.0 |
-| **Build Command** | `npm install` |
-| **Start Command** | `node app.js` |
-| **Database** | MongoDB Atlas |
-| **Environment** | Configured in Render dashboard |
+🎯 Search and filter destinations
 
-## 📝 Key Functionalities
+👤 For Registered Users
+➕ Create new travel listings
 
-### 👥 For All Users
-- 🌐 Browse all travel listings
-- 🔍 View detailed listing pages with reviews
-- 🎯 Search and filter destinations
+✏️ Edit/delete own listings
 
-### 👤 For Registered Users
-- ➕ Create new travel listings
-- ✏️ Edit/delete own listings
-- ⭐ Leave reviews and ratings
-- 🖼️ Upload listing images
-- 🗺️ Interactive map viewing
+⭐ Leave reviews and ratings
 
-### 🔐 Authentication Features
-- 🔒 Secure password hashing
-- 🎫 Session-based authentication
-- 🛡️ Authorization checks
-- 💬 Flash messages for feedback
+🖼️ Upload listing images
 
-## 🧠 Learning Outcomes
+🗺️ Interactive map viewing
 
-This project was developed with guidance from **Apna College tutorials** and helped master:
+🔐 Authentication Features
+🔒 Secure password hashing
 
-- 🏗️ Full-stack development with Node.js and Express
-- 🗄️ MongoDB database design with Mongoose
-- 🔐 User authentication and authorization
-- 📁 File upload handling with Cloudinary
-- 🔗 RESTful API design principles
-- 🎨 EJS templating and partials
-- ⚠️ Error handling and validation
-- ☁️ Deployment to cloud platforms
+🎫 Session-based authentication
 
-## 🔧 API Endpoints
+🛡️ Authorization checks
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| GET | `/listings` | View all listings | ❌ |
-| POST | `/listings` | Create new listing | ✅ |
-| GET | `/listings/:id` | View single listing | ❌ |
-| PUT | `/listings/:id` | Update listing | ✅ |
-| DELETE | `/listings/:id` | Delete listing | ✅ |
-| POST | `/listings/:id/reviews` | Add review | ✅ |
-| DELETE | `/reviews/:id` | Delete review | ✅ |
-| GET | `/signup` | User registration | ❌ |
-| GET | `/login` | User login | ❌ |
-| POST | `/signup` | Create user | ❌ |
-| POST | `/login` | Authenticate user | ❌ |
-| GET | `/logout` | User logout | ✅ |
+💬 Flash messages for feedback
 
-## 🤝 Contributing
+🧠 Learning Outcomes
+This project was developed with guidance from Apna College tutorials and helped master:
 
+🏗️ Full-stack development with Node.js and Express
+
+🗄️ MongoDB database design with Mongoose
+
+🔐 User authentication and authorization
+
+📁 File upload handling with Cloudinary
+
+🔗 RESTful API design principles
+
+🎨 EJS templating and partials
+
+⚠️ Error handling and validation
+
+☁️ Deployment to cloud platforms
+
+🔧 API Endpoints
+Method	Endpoint	Description	Auth Required
+GET	/listings	View all listings	❌
+POST	/listings	Create new listing	✅
+GET	/listings/:id	View single listing	❌
+PUT	/listings/:id	Update listing	✅
+DELETE	/listings/:id	Delete listing	✅
+POST	/listings/:id/reviews	Add review	✅
+DELETE	/reviews/:id	Delete review	✅
+GET	/signup	User registration	❌
+GET	/login	User login	❌
+POST	/signup	Create user	❌
+POST	/login	Authenticate user	❌
+GET	/logout	User logout	✅
+🤝 Contributing
 While this is a learning project, suggestions are welcome! Feel free to:
 
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch
-3. 💻 Commit your changes
-4. 🔀 Submit a pull request
+🍴 Fork the repository
 
-## 🙏 Acknowledgments
+🌿 Create a feature branch
 
-| Resource | Purpose |
-|----------|---------|
-| **Apna College** | Comprehensive tutorials and guidance |
-| **Render.com** | Hosting services |
-| **MongoDB Atlas** | Cloud database |
-| **Cloudinary** | Image storage |
-| **All open-source packages** | Project dependencies |
+💻 Commit your changes
 
-## 📄 License
+🔀 Submit a pull request
 
-This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
+🙏 Acknowledgments
+Resource	Purpose
+Apna College	Comprehensive tutorials and guidance
+Render.com	Hosting services
+MongoDB Atlas	Cloud database
+Cloudinary	Image storage
+All open-source packages	Project dependencies
+📄 License
+This project is licensed under the ISC License - see the LICENSE file for details.
 
----
-
-**✨ Built with passion for travel and technology ✈️💻**
-```
+✨ Built with passion for travel and technology ✈️💻
 
 This format includes:
 - Badges for technologies
